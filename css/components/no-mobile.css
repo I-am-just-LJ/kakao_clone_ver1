@@ -1,4 +1,15 @@
-#no-mobile {
+@keyframes flip-diagonal-2-bck {
+  0% {
+    transform: translateZ(0) rotate3d(-1, 1, 0, 0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateZ(-260px) rotate3d(-1, 1, 0, -180deg);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.no-mobile {
   position: absolute;
   z-index: 99;
   height: 100vh;
@@ -8,11 +19,17 @@
   justify-content: center;
   align-items: center;
   font-size: 32px;
+  text-align: center;
   top: 0;
 }
 
-@media screen and (max-width: 645px) {
-  #no-mobile {
+@media screen and (max-width: 650px) {
+  .no-mobile {
+    animation: flip-diagonal-2-bck 1s ease-in-out;
+    animation-fill-mode: forwards; /*마지막 프레임 유지*/
+    /* display: none; */
+  }
+  .no-mobile-etc {
     display: none;
   }
 }
