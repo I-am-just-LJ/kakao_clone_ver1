@@ -29,6 +29,6 @@ body {
   padding: 0px var(--horizontal-space);
 }
 
-main {
+/* main {
   overflow-y: scroll;
-}
+} */
