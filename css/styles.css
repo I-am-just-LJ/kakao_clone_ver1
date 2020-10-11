@@ -30,5 +30,5 @@ body {
 }
 
 main {
-  height: 100vh;
+  overflow-y: scroll;
 }
